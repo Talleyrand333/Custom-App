@@ -35,7 +35,7 @@ def send_doctype_print(doc,settings):
             recipients=email_args['recipients'],
             message=email_args['message'],
             subject=email_args['subject'],
-            attachments=email_args['attachments2'],
+            attachments=email_args['attachments'],
             reference_doctype=doc.doctype,
             reference_name=doc.name
     )
