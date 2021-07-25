@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2021-07-24 07:48:40.907590",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sales_invoice_print_format",
+  "sales_invoice_email",
+  "sales_invoice_message",
+  "column_break_3",
+  "delivery_note_print_format",
+  "delivery_note_email",
+  "delivery_note_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "sales_invoice_print_format",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sales Invoice Print Format",
+   "options": "Print Format",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_invoice_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sales Invoice Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_note_print_format",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Delivery Note Print Format",
+   "options": "Print Format",
+   "reqd": 1
+  },
+  {
+   "fieldname": "delivery_note_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Delivery Note Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_invoice_message",
+   "fieldtype": "Small Text",
+   "label": "Sales Invoice Message"
+  },
+  {
+   "fieldname": "delivery_note_message",
+   "fieldtype": "Small Text",
+   "label": "Delivery Note Message"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-07-24 14:56:10.577848",
+ "modified_by": "Administrator",
+ "module": "Custom App",
+ "name": "Settings Page",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
