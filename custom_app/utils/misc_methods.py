@@ -13,6 +13,18 @@ def submit_inv(doc,event):
             send_doctype_print(doc,settings_doc)
             send_doctype_print(doc,settings_doc)
 
+@frappe.whitelist()
+def email_docprint(docname):
+    try:
+        settings = frappe.get_doc("Settings Page")
+        doc = frappe.get_doc("Sales Invoice",docname)
+        send_doctype_print(doc,settings)
+        return settings.sales_invoice_email
+    except:
+        frappe.log_error(frappe.get_traceback(),"ERROR SENDING MAIL TO PRINT")
+
+
+
 
 def send_doctype_print(doc,settings):
     pf = settings.sales_invoice_print_format if doc.doctype =="Sales Invoice" else settings.delivery_note_print_format
