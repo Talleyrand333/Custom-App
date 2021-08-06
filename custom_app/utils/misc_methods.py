@@ -2,6 +2,8 @@ import frappe
 """"
 the plan is to fetch the required details from the settings pages and send to the customer in whatever requirement
 """
+
+
 def submit_inv(doc,event):
     settings_doc = frappe.get_doc("Settings Page")
     if doc._action=='submit':
