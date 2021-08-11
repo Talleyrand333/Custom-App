@@ -26,6 +26,21 @@ def email_docprint(docname):
         frappe.log_error(frappe.get_traceback(),"ERROR SENDING MAIL TO PRINT")
 
 
+@frappe.whitelist()
+def email_docprint_from_list(names):
+    import json
+    try:
+        names = json.loads(names)
+        for name in names:
+            settings = frappe.get_doc("Settings Page")
+            doc = frappe.get_doc("Sales Invoice",name)
+            if doc.docstatus == 1:
+                send_doctype_print(doc,settings)
+            # resturn settings.sales_invoice_email
+    except:
+        frappe.log_error(frappe.get_traceback(),"ERROR SENDING MAIL TO PRINT")
+
+
 
 
 def send_doctype_print(doc,settings):
